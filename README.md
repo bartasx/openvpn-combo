@@ -19,8 +19,13 @@ The *transvpnmon* service in this package solves these problems by:
 * Update, start, or restart the *3proxy* service as necessary
 
 ## Overview
+[TBD]
 ## Install and Configure *OpenVPN*
+[TBD]
 ## Install and Configure *Transmission*
+[TBD]
 ## Install and Configure *3proxy*
+[TBD]
 ## Install and Configure *transvpnmon*
+[TBD]
 
