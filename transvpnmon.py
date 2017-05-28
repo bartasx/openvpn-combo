@@ -1,11 +1,12 @@
 #!/usr/local/bin/python2.7
 
+import os
 import re
 import time
 
 from subprocess import Popen, PIPE
 
-DEBUG = False
+DEBUG = 'TRANSVPNMON_DEBUG' in os.environ
 
 def get_tun_ip():
     pipe = Popen("ifconfig tun0", shell=True, stdout=PIPE, stderr=PIPE).stdout
@@ -119,6 +120,7 @@ def run():
             is_updated = update_transmission_bind_addr(tun_ip)
             if is_updated or not status_transmission():
                 start_transmission()
+            is_updated = update_3proxy_bind_addr(tun_ip)
             if is_updated or not status_3proxy():
                 start_3proxy()
         time.sleep(30)
