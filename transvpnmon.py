@@ -86,6 +86,8 @@ def update_transmission_bind_addr(addr, settings_file='/transmission/config/sett
             result = True
             if DEBUG:
                 print("Updated transmission settings for %s" % addr)
+    elif DEBUG:
+        print("transmission settings are okay")
     return result
 
 def update_3proxy_bind_addr(addr, cfg_file='/usr/local/etc/3proxy.cfg', try_stop_3proxy=True):
@@ -106,6 +108,8 @@ def update_3proxy_bind_addr(addr, cfg_file='/usr/local/etc/3proxy.cfg', try_stop
             result = True
             if DEBUG:
                 print("Updated 3proxy settings for %s" % addr)
+    elif DEBUG:
+        print("3proxy settings are okay")
     return result
 
 def run():
